@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Home */
+/* Centrar los links en la pantalla */
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* ocupa toda la pantalla */
+  background: #f9fafb; /* fondo suave */
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+/* Estilo base de los links */
+.link-container a {
+  position: relative;
+  text-decoration: none;
+  color: #2d7a4b; /* verde elegante */
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 12px 0;
+  transition: color 0.3s ease;
+}
+
+/* Línea animada debajo del link */
+.link-container a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #2d7a4b;
+  transition: width 0.3s ease;
+}
+
+/* Hover: cambia color + muestra subrayado */
+.link-container a:hover {
+  color: #25633d;
+}
+
+.link-container a:hover::after {
+  width: 100%;
+}
+
+/* Versión oscura opcional */
+.dark .link-container {
+  background: #0f172a;
+}
+
+.dark .link-container a {
+  color: #a7f3d0;
+}
+
+.dark .link-container a::after {
+  background-color: #34d399;
+}
+
+
+/* Contenedor del formulario */
+.form-container {
+  width: 90%;
+  max-width: 800px; /* aumenta el ancho máximo para pantallas grandes */
+  margin: 40px auto;
+  background: #ffffff;
+  border: 1px solid #e5e8eb;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* para pantallas medianas */
+@media (max-width: 768px) {
+  .form-container {
+    width: 95%;
+    padding: 30px 25px;
+  }
+}
+
+/* para móviles pequeños */
+@media (max-width: 480px) {
+  .form-container {
+    width: 100%;
+    border-radius: 0;
+    padding: 20px;
+  }
+
+  input,
+  select {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+/* Encabezado */
+.text-2xl,
+.enlace {
+  margin: 40px;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Campos de formulario */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d6d9dc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #3fb950; /* verde suave tipo Formstack */
+  box-shadow: 0 0 0 3px rgba(63, 185, 80, 0.15);
+  outline: none;
+}
+
+/* Fecha de nacimiento en línea */
+.date-group {
+  display: flex;
+  gap: 10px;
+}
+
+.date-group select {
+  flex: 1;
+}
+
+/* Botón principal */
+button {
+  width: 100%;
+  background-color: #2d7a4b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+button:hover {
+  background-color: #25633d;
+}
+
+/* Línea superior verde (como encabezado del formulario en la imagen) */
+.form-header-bar {
+  background-color: #eaf7ef;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header-bar span {
+  color: #2d7a4b;
+  font-weight: 600;
+}
+
+/* Contrato generado */
+.text-center {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+.subtitulo {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.sub {
+  text-decoration: underline;
+}
+table {
+  border-collapse: separate; /* importante */
+  border-spacing: 0 15px; /* 15px de espacio vertical entre filas */
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.firma {
+  margin-top:150px;
+}
+
